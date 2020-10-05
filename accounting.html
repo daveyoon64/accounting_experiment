@@ -1,0 +1,20 @@
+<script src="accountingjs/accounting.js"></script>
+
+<script type="text/javascript">
+	// Library ready to use:
+	console.log(accounting.formatMoney(5318008));
+    console.log(accounting.formatMoney(4999.99, "€", 2, ".", ","));
+    console.log(accounting.formatMoney(-500000, "£ ", 0));
+    console.log(accounting.formatMoney(5318008, {
+	  symbol: "GBP",
+	  precision: 0,
+	  thousand: "·",
+	  format: {
+	    pos : "%s %v",
+	    neg : "%s (%v)",
+	    zero: "%s  --"
+      }
+    }));
+    var list = [123, 12345];
+    console.log(accounting.formatColumn(list, [symbol = "$"],[precision = 2],[thousand = ","],[decimal = "."],[format = "%s%v"]));
+</script>
